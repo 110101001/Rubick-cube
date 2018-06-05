@@ -35,6 +35,25 @@ way_node *create_node(cube *C){
     return new_node;
 }
 
-int search_phase1(way_node *head){
-    
+way_node* search_phase1(way_node *head){
+    way_node* present;
+    present=head;
+    while(cube_match_phase1(present->C)){
+        way_node* new_node;
+        for(int i=0;i<18;i++){
+            new_node=create_node(cube_copy(present->C));
+            cube_operation(new_node->C,i);
+            if(is_visted(new_node->C)!=0){
+                new_node->state_last=present;
+                new_node->act=i;
+                queue_push(new_node);
+            }
+            else{
+                free(new_node->C);
+                free(new_node);
+            }
+        }
+        present=queue_pop();
+    }
+    return present;
 }

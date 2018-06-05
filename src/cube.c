@@ -154,3 +154,19 @@ u8 cube_match(cube *C1,cube *C2){
     }
     return 0;
 }
+
+u8 cube_match_phase1(cube* C){
+    for(int i=0; i<12;i++){
+        if(C->er[i]!=0)
+            return 1;
+    }
+    for(int i=0;i<8;i++){
+        if(C->cr[i]!=0)
+            return 1;
+    }
+    for(int i=8;i<12;i++){
+        if(C->ea[i]<8)
+            return 1;
+    }
+    return 0;
+}
