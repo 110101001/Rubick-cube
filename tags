@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+C	include/search.h	/^    cube* C;$/;"	m	struct:way_node
+CUBE_H_	include/cube.h	2;"	d
+CUBE_H_	include/search.h	2;"	d
+SYS_H_	sys.h	2;"	d
+ca	include/cube.h	/^    u8 ca[8];$/;"	m	struct:cube
+circulate	include/cube.h	11;"	d
+circulate2	include/cube.h	18;"	d
+cr	include/cube.h	/^    u8 cr[8];$/;"	m	struct:cube
+crotate	include/cube.h	22;"	d
+crotate2	include/cube.h	30;"	d
+cube	include/cube.h	/^typedef struct cube{$/;"	s
+cube	include/cube.h	/^} cube;$/;"	t	typeref:struct:cube
+cube_copy	src/cube.c	/^cube* cube_copy(cube *C){$/;"	f
+cube_match	src/cube.c	/^u8 cube_match(cube *C1,cube *C2){$/;"	f
+cube_operation	src/cube.c	/^cube* cube_operation(cube *C_old,u8 op){$/;"	f
+ea	include/cube.h	/^    u8 ea[12];$/;"	m	struct:cube
+er	include/cube.h	/^    u8 er[12];$/;"	m	struct:cube
+erotate	include/cube.h	26;"	d
+last	include/search.h	/^    struct way_node* last;$/;"	m	struct:way_node	typeref:struct:way_node::way_node
+next	include/search.h	/^    struct way_node* next;$/;"	m	struct:way_node	typeref:struct:way_node::way_node
+swap	include/cube.h	6;"	d
+u8	include/cube.h	4;"	d
+way_node	include/search.h	/^typedef struct way_node{$/;"	s
+way_node	include/search.h	/^} way_node;$/;"	t	typeref:struct:way_node

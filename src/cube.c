@@ -1,7 +1,9 @@
 #include "../include/cube.h"
 #include "../sys.h"
-cube* cube_operation(cube *C,u8 op){
+cube* cube_operation(cube *C_old,u8 op){
     u8 temp;
+    cube* C;
+    C=cube_copy(C_old);
     switch(op){
         case 0:
             circulate(C->ea[0],C->ea[1],C->ea[2],C->ea[3]);
@@ -106,4 +108,31 @@ cube* cube_operation(cube *C,u8 op){
             crotate2(C->ca[5]);
             crotate(C->ca[6]);
     }
+    return C;
+}
+
+cube* cube_copy(cube *C){
+    cube *C_new;
+    C_new=(cube*)malloc(sizeof(cube));
+    for(int i=0;i<8;i++){
+        C_new->ca[i]=C->ca[i];
+        C_new->cr[i]=C->cr[i];
+    }
+    for(int i=0;i<12;i++){
+        C_new->ea[i]=C->ea[i];
+        C_new->er[i]=C->er[i];
+    }
+    return C_new;
+}
+
+u8 cube_match(cube *C1,cube *C2){
+    for(int i=0;i<8;i++){
+        if(C1->ca[i]!=C2->ca[i]) return 1;
+        if(C1->cr[i]!=C2->cr[i]) return 1;
+    }
+    for(int i=0;i<12;i++){
+        if(C1->ea[i]!=C2->ea[i]) return 1;
+        if(C1->er[i]!=C2->er[i]) return 1;
+    }
+    return 0;
 }

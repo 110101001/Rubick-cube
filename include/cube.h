@@ -38,5 +38,8 @@ typedef struct cube{
     u8 er[12];
 } cube;
 
+cube* cube_operation(cube *C_old,u8 op);
+cube* cube_copy(cube *C);
+u8 cube_match(cube *C1,cube *C2);
 
 #endif
