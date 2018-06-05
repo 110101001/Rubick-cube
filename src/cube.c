@@ -8,12 +8,15 @@ cube* cube_operation(cube *C_old,u8 op){
         case 0:
             circulate(C->ea[0],C->ea[1],C->ea[2],C->ea[3]);
             circulate(C->ca[0],C->ca[1],C->ca[2],C->ca[3]);
+            break;
         case 1:
             circulate2(C->ea[0],C->ea[1],C->ea[2],C->ea[3]);
             circulate2(C->ca[0],C->ca[1],C->ca[2],C->ca[3]);
+            break;
         case 2:
             circulate(C->ea[3],C->ea[2],C->ea[1],C->ea[0]);
             circulate(C->ca[3],C->ca[2],C->ca[1],C->ca[0]);
+            break;
         case 3:
             circulate(C->ea[3],C->ea[10],C->ea[7],C->ea[11]);
             circulate(C->ca[3],C->ca[2],C->ca[6],C->ca[7]);
@@ -21,9 +24,11 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate2(C->ca[2]);
             crotate(C->ca[6]);
             crotate2(C->ca[7]);
+            break;
         case 4:
             circulate2(C->ea[3],C->ea[10],C->ea[7],C->ea[11]);
             circulate2(C->ca[3],C->ca[2],C->ca[6],C->ca[7]);
+            break;
         case 5:
             circulate(C->ea[11],C->ea[7],C->ea[10],C->ea[3]);
             circulate(C->ca[7],C->ca[6],C->ca[2],C->ca[3]);
@@ -31,6 +36,7 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate(C->ca[2]);
             crotate2(C->ca[6]);
             crotate(C->ca[7]);
+            break;
         case 6:
             circulate(C->ea[0],C->ea[11],C->ea[4],C->ea[8]);
             circulate(C->ca[0],C->ca[3],C->ca[7],C->ca[4]);
@@ -42,9 +48,11 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate2(C->ca[3]);
             crotate(C->ca[7]);
             crotate2(C->ca[4]);
+            break;
         case 7:
             circulate2(C->ea[0],C->ea[11],C->ea[4],C->ea[8]);
             circulate2(C->ca[0],C->ca[3],C->ca[7],C->ca[4]);
+            break;
         case 8:
             circulate(C->ea[8],C->ea[4],C->ea[11],C->ea[0]);
             circulate(C->ca[4],C->ca[7],C->ca[3],C->ca[0]);
@@ -56,15 +64,19 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate(C->ca[3]);
             crotate2(C->ca[7]);
             crotate(C->ca[4]);
+            break;
         case 9:
             circulate(C->ea[7],C->ea[6],C->ea[5],C->ea[4]);
             circulate(C->ca[7],C->ca[6],C->ca[5],C->ca[4]);
+            break;
         case 10:
             circulate2(C->ea[7],C->ea[6],C->ea[5],C->ea[4]);
             circulate2(C->ca[7],C->ca[6],C->ca[5],C->ca[4]);
+            break;
         case 11:
             circulate(C->ea[4],C->ea[5],C->ea[6],C->ea[7]);
             circulate(C->ca[4],C->ca[5],C->ca[6],C->ca[7]);
+            break;
         case 12:
             circulate(C->ea[1],C->ea[8],C->ea[5],C->ea[9]);
             circulate(C->ca[1],C->ca[0],C->ca[4],C->ca[5]);
@@ -72,9 +84,11 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate2(C->ca[0]);
             crotate(C->ca[4]);
             crotate2(C->ca[5]);
+            break;
         case 13:
             circulate2(C->ea[1],C->ea[8],C->ea[5],C->ea[9]);
             circulate2(C->ca[1],C->ca[0],C->ca[4],C->ca[5]);
+            break;
         case 14:
             circulate(C->ea[9],C->ea[5],C->ea[8],C->ea[1]);
             circulate(C->ca[5],C->ca[4],C->ca[0],C->ca[1]);
@@ -82,6 +96,7 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate(C->ca[0]);
             crotate2(C->ca[4]);
             crotate(C->ca[5]);
+            break;
         case 15:
             circulate(C->ea[2],C->ea[9],C->ea[6],C->ea[10]);
             circulate(C->ca[2],C->ca[1],C->ca[5],C->ca[6]);
@@ -93,9 +108,11 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate2(C->ca[1]);
             crotate(C->ca[5]);
             crotate2(C->ca[6]);
+            break;
         case 16:
             circulate2(C->ea[2],C->ea[9],C->ea[6],C->ea[10]);
             circulate2(C->ca[2],C->ca[1],C->ca[5],C->ca[6]);
+            break;
         case 17:
             circulate(C->ea[10],C->ea[6],C->ea[9],C->ea[2]);
             circulate(C->ca[6],C->ca[5],C->ca[1],C->ca[2]);
@@ -107,6 +124,7 @@ cube* cube_operation(cube *C_old,u8 op){
             crotate(C->ca[1]);
             crotate2(C->ca[5]);
             crotate(C->ca[6]);
+            break;
     }
     return C;
 }

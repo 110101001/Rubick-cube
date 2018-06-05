@@ -1,13 +1,15 @@
-#ifndef CUBE_H_
-#define CUBE_H_
+#ifndef SEARCH_H_
+#define SEARCH_H_
 
 #include "cube.h"
 
 typedef struct way_node{
-    struct way_node* last;
-    struct way_node* next;
+    struct way_node* state_last;
+    struct way_node* queue_next;
     u8 act;
     cube* C;
 } way_node;
+
+
 
 #endif
