@@ -1,0 +1,4 @@
+solver:main.o src/hash.o src/cube.o src/search.o
+    gcc main.o src/hash.o src/cube.o src/search.o -o solver
+main.o:main.c
+    gcc main.c

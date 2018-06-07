@@ -3,5 +3,6 @@
 
 #include "include/cube.h" 
 #include "include/search.h"
+#include "include/hash.h"
 
 #endif

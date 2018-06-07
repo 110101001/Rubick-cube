@@ -1,5 +1,4 @@
-#include "../include/search.h"
-#include "../include/cube.h"
+#include "../cube_solve.h"
 #include "../sys.h"
 
 way_node *queue_buttom_pointer;
@@ -24,9 +23,6 @@ way_node *queue_pop(){
     return ret;
 }
 
-u8 is_visted(cube *C){
-    //TODO:use hash to find same cube
-}
 
 way_node *create_node(cube *C){
     way_node* new_node;
@@ -43,7 +39,7 @@ way_node* search_phase1(way_node *head){
         for(int i=0;i<18;i++){
             new_node=create_node(cube_copy(present->C));
             cube_operation(new_node->C,i);
-            if(is_visted(new_node->C)!=0){
+            if(is_visted(new_node)!=0){
                 new_node->state_last=present;
                 new_node->act=i;
                 queue_push(new_node);
