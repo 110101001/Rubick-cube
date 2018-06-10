@@ -1,5 +1,8 @@
 #include "../include/cube.h"
 #include "../sys.h"
+
+cube restored={{0,1,2,3,4,5,6,7},{0,0,0,0,0,0,0,0},{0,1,2,3,4,5,6,7,8,9,10,11},{0,0,0,0,0,0,0,0,0,0,0,0}};
+
 cube* cube_operation(cube *C_old,u8 op){
     u8 temp;
     cube* C;
@@ -169,4 +172,24 @@ u8 cube_match_phase1(cube* C){
             return 1;
     }
     return 0;
+}
+
+void cube_print(cube *C){
+    printf("Corner Arrangement:");
+    for(int i=0;i<8;i++){
+        printf("%d ",C->ca[i]);
+    }
+    printf("\nCorner Rotate:");
+    for(int i=0;i<8;i++){
+        printf("%d ",C->cr[i]);
+    }
+    printf("\nEdge Arrangement:");
+    for(int i=0;i<12;i++){
+        printf("%d ",C->ea[i]);
+    }
+    printf("\nEdge Rotate:");
+    for(int i=0;i<12;i++){
+        printf("%d ",C->er[i]);
+    }
+    printf("\n");
 }
