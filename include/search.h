@@ -16,5 +16,6 @@ void queue_push(way_node* node);
 way_node *queue_pop();
 way_node *create_node(cube *C);
 way_node *search_phase1(way_node *head);
+void Get_path(way_node *end);
 
 #endif

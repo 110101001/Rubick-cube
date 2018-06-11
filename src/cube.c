@@ -41,10 +41,10 @@ cube* cube_operation(cube *C,u8 op){
         case 6:
             circulate(C->ea[0],C->ea[11],C->ea[4],C->ea[8]);
             circulate(C->ca[0],C->ca[3],C->ca[7],C->ca[4]);
-            erotate(C->er[0]);
-            erotate(C->er[11]);
-            erotate(C->er[4]);
-            erotate(C->er[8]);
+            erotate(C->er[C->ea[0]]);
+            erotate(C->er[C->ea[11]]);
+            erotate(C->er[C->ea[4]]);
+            erotate(C->er[C->ea[8]]);
             crotate(C->cr[C->ca[0]]);
             crotate2(C->cr[C->ca[3]]);
             crotate(C->cr[C->ca[7]]);
@@ -57,10 +57,10 @@ cube* cube_operation(cube *C,u8 op){
         case 8:
             circulate(C->ea[8],C->ea[4],C->ea[11],C->ea[0]);
             circulate(C->ca[4],C->ca[7],C->ca[3],C->ca[0]);
-            erotate(C->er[0]);
-            erotate(C->er[11]);
-            erotate(C->er[4]);
-            erotate(C->er[8]);
+            erotate(C->er[C->ea[0]]);
+            erotate(C->er[C->ea[11]]);
+            erotate(C->er[C->ea[4]]);
+            erotate(C->er[C->ea[8]]);
             crotate2(C->cr[C->ca[0]]);
             crotate(C->cr[C->ca[3]]);
             crotate2(C->cr[C->ca[7]]);
@@ -101,10 +101,10 @@ cube* cube_operation(cube *C,u8 op){
         case 15:
             circulate(C->ea[2],C->ea[9],C->ea[6],C->ea[10]);
             circulate(C->ca[2],C->ca[1],C->ca[5],C->ca[6]);
-            erotate(C->er[2]);
-            erotate(C->er[9]);
-            erotate(C->er[6]);
-            erotate(C->er[10]);
+            erotate(C->er[C->ea[2]]);
+            erotate(C->er[C->ea[9]]);
+            erotate(C->er[C->ea[6]]);
+            erotate(C->er[C->ea[10]]);
             crotate(C->cr[C->ca[2]]);
             crotate2(C->cr[C->ca[1]]);
             crotate(C->cr[C->ca[5]]);
@@ -117,10 +117,10 @@ cube* cube_operation(cube *C,u8 op){
         case 17:
             circulate(C->ea[10],C->ea[6],C->ea[9],C->ea[2]);
             circulate(C->ca[6],C->ca[5],C->ca[1],C->ca[2]);
-            erotate(C->er[2]);
-            erotate(C->er[9]);
-            erotate(C->er[6]);
-            erotate(C->er[10]);
+            erotate(C->er[C->ea[2]]);
+            erotate(C->er[C->ea[9]]);
+            erotate(C->er[C->ea[6]]);
+            erotate(C->er[C->ea[10]]);
             crotate2(C->cr[C->ca[2]]);
             crotate(C->cr[C->ca[1]]);
             crotate2(C->cr[C->ca[5]]);

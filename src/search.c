@@ -55,3 +55,13 @@ way_node* search_phase1(way_node *head){
     }
     return present;
 }
+
+void Get_path(way_node *end){
+    way_node *present;
+    present=end;
+    while(present->state_last!=0){
+        printf("%d ",present->act);
+        present=present->state_last;
+    }
+    printf("\n");
+}
