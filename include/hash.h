@@ -5,7 +5,9 @@
 #include "search.h"
 
 way_node* hash(way_node *node);
+void hash_init();
 u8 is_visted(way_node* node);
+void hash_list_start(way_node* node);
 void hash_add(way_node* last_node,way_node* new_node);
 u8 hash_search(way_node* hash_start, way_node* node);
 

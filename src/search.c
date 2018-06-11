@@ -35,6 +35,8 @@ way_node* search_phase1(way_node *head){
     way_node* present;
     present=head;
     while(cube_match_phase1(present->C)){
+        //printf("%d:\n",present->act);
+        //cube_print(present->C);
         way_node* new_node;
         for(int i=0;i<18;i++){
             new_node=create_node(cube_copy(present->C));

@@ -28,7 +28,7 @@
     a%=2
 
 #define crotate2(a)\
-    a-=1;\
+    a+=2;\
     a%=3
 
 typedef struct cube{
