@@ -43,5 +43,6 @@ cube* cube_operation(cube *C_old,u8 op);
 cube* cube_copy(cube *C);
 u8 cube_match(cube *C1,cube *C2);
 u8 cube_match_phase1(cube* C);
+u8 cube_match_phase2(cube* C);
 void cube_print(cube *C);
 #endif
