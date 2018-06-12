@@ -1,6 +1,8 @@
 #include "../cube_solve.h"
 #include "../sys.h"
 
+int phase2_op[10]={0,1,2,4,7,9,10,11,13,16};
+
 way_node *queue_buttom_pointer;
 way_node *queue_top_pointer;
 
@@ -36,7 +38,7 @@ way_node* search_phase1(way_node *head){
     while(cube_match_phase1(present->C)){
         //printf("%d:\n",present->act);
         //cube_print(present->C);
-        Get_path(present);
+        //Get_path(present);
         way_node* new_node;
         for(int i=0;i<18;i++){
             new_node=create_node(cube_copy(present->C));
@@ -63,7 +65,8 @@ way_node* search_phase2(way_node *head){
         //printf("%d:\n",present->act);
         //cube_print(present->C);
         way_node* new_node;
-        for(int i=0;i<18;i++){
+        for(int j=0;j<10;j++){
+            int i=phase2_op[j];
             new_node=create_node(cube_copy(present->C));
             cube_operation(new_node->C,i);
             if(is_visted(new_node)!=0){
